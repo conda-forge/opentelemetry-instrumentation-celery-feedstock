@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-celery" %}
-{% set version = "0.30b1" %}
+{% set version = "0.31b0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-instrumentation-celery-{{ version }}.tar.gz
-  sha256: 11ca528558ca0633680b06960a5b3095febafba73ddc73b79826bd8fc9a7fef9
+  sha256: a3c6df4a72291139516fa6c47094e2f09dcd2295d6252faa30176767a3282151
 
 build:
   number: 0
@@ -21,8 +21,8 @@ requirements:
     - python >=3.6
   run:
     - opentelemetry-api ~=1.3
-    - opentelemetry-instrumentation ==0.30b1
-    - opentelemetry-semantic-conventions ==0.30b1
+    - opentelemetry-instrumentation ==0.31b0
+    - opentelemetry-semantic-conventions ==0.31b0
     - python >=3.6
     # - pytest 
     # - opentelemetry-test ==0.24b0
@@ -56,6 +56,9 @@ requirements:
     # - celery <6.0,>=4.0
     # - pytest 
     # - opentelemetry-test-utils ==0.30b1
+    # - celery <6.0,>=4.0
+    # - pytest 
+    # - opentelemetry-test-utils ==0.31b0
     # - celery <6.0,>=4.0
 
 test:
