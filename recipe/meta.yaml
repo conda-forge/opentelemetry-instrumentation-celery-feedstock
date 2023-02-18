@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-celery" %}
-{% set version = "0.36b0" %}
+{% set version = "0.37b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_celery-{{ version }}.tar.gz
-  sha256: 929041edc4d367e49974730d2ad6802765e65d9a98714289c13b823913075445
+  sha256: a957e67ccea7cbb65f57f7c4d8428930c8196d20a40f0a90f3e7ae3381ee74fe
 
 build:
   noarch: python
@@ -21,9 +21,14 @@ requirements:
     - hatchling
   run:
     - python >=3.7
-    - opentelemetry-api >=1.12,<2.dev0
-    - opentelemetry-instrumentation ==0.36b0
-    - opentelemetry-semantic-conventions ==0.36b0
+    - opentelemetry-api ~=1.12
+    - opentelemetry-instrumentation ==0.37b0
+    - opentelemetry-semantic-conventions ==0.37b0
+    # - pytest 
+    # - opentelemetry-test-utils ==0.37b0
+    # - opentelemetry-instrumentation-celery 
+    # - importlib-metadata ==4.13.0
+    # - celery <6.0,>=4.0
 
 test:
   imports:
